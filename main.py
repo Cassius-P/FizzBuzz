@@ -10,9 +10,6 @@ class FizzBuzz:
     def getResult(self):
         return self.result
 
-    def getValue(self):
-        return self.value
-
     def verifyValue(self):
         if(self.value <= 0):
             self.result = Exception("le nombre ne peut pas etre inférieur ou égal à 0 "+ str(self.value))
@@ -25,8 +22,6 @@ class FizzBuzz:
             self.result = "Fizz"
         else:
             self.result = self.value
-
-
 
 class Tests(unittest.TestCase):
     def modulo3(self):
