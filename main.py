@@ -30,12 +30,17 @@ class FizzBuzz:
 
 class Tests(unittest.TestCase):
     def modulo3(self):
-        self.assertEqual(FizzBuzz(3*random.randint(1,4)).getResult(), "Fizz")
+        self.assertEqual(FizzBuzz(36).getResult(), "Fizz")
 
     def modulo5(self):
-        self.assertEqual(FizzBuzz(5 * random.randint(5, 10)).getResult(), "Buzz")
+        self.assertEqual(FizzBuzz(65).getResult(), "Buzz")
+
+    def below0(self):
+        self.assertRaises(Exception, FizzBuzz(5 - random.randint(5, 100)).getResult())
 
 if __name__ == '__main__':
    test = Tests()
    test.modulo3()
    test.modulo5()
+   test.below0()
+
