@@ -38,9 +38,14 @@ class Tests(unittest.TestCase):
     def below0(self):
         self.assertRaises(Exception, FizzBuzz(5 - random.randint(5, 100)).getResult())
 
+    def equal0(self):
+        self.assertRaises(Exception, FizzBuzz(0).getResult())
+
 if __name__ == '__main__':
    test = Tests()
+
    test.modulo3()
    test.modulo5()
    test.below0()
+   test.equal0()
 
