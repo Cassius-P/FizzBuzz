@@ -28,3 +28,9 @@ class FizzBuzz:
 
 
 
+class Tests(unittest.TestCase):
+    def modulo3(self):
+        self.assertEqual(FizzBuzz(3*random.randint(1,50)).getResult(), "Fizz")
+
+if __name__ == '__main__':
+   Tests().modulo3()
