@@ -33,13 +33,10 @@ class Tests(unittest.TestCase):
         self.assertEqual(FizzBuzz(36).getResult(), "Fizz")
 
     def modulo5(self):
-        self.assertEqual(FizzBuzz(65).getResult(), "Buzz")
+        self.assertEqual(FizzBuzz(63).getResult(), "Buzz")
 
-    def below0(self):
+    def belowOrEqual0(self):
         self.assertRaises(Exception, FizzBuzz(5 - random.randint(5, 100)).getResult())
-
-    def equal0(self):
-        self.assertRaises(Exception, FizzBuzz(0).getResult())
 
     def noCase(self):
         self.assertEqual(FizzBuzz(64).getResult(), 64)
