@@ -24,7 +24,7 @@ class FizzBuzz:
         elif(self.value % 3 == 0):
             self.result = "Fizz"
         else:
-            self.result = "Le nombre était " + str(self.value)
+            self.result = self.value
 
 
 
@@ -41,6 +41,9 @@ class Tests(unittest.TestCase):
     def equal0(self):
         self.assertRaises(Exception, FizzBuzz(0).getResult())
 
+    def noCase(self):
+        self.assertEqual(FizzBuzz(64).getResult(), 64)
+
 if __name__ == '__main__':
    test = Tests()
 
@@ -48,4 +51,6 @@ if __name__ == '__main__':
    test.modulo5()
    test.below0()
    test.equal0()
+   test.noCase()
+
 
