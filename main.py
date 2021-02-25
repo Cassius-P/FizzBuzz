@@ -41,13 +41,14 @@ class Tests(unittest.TestCase):
     def noCase(self):
         self.assertEqual(FizzBuzz(64).getResult(), 64)
 
+    def modulo5et3(self):
+        self.assertEqual(FizzBuzz(15 * random.randint(1,10)).getResult(), "FizzBuzz")
+
 if __name__ == '__main__':
    test = Tests()
 
    test.modulo3()
    test.modulo5()
-   test.below0()
-   test.equal0()
+   test.belowOrEqual0()
    test.noCase()
-
-
+   test.modulo5et3()
